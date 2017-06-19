@@ -27,19 +27,13 @@ function Loader($dir = 'plugins',$DieOnFail = true){
     ){
       die('Loader could not find dir: '.$dir);
     }
-    
-    if(file_exists($include_path=$dir.'/main.php')){
+
+    if(file_exists($include_path=$dir.'/Routing.php')){
       Event('Before Loading: '.$include_path);
       include_once($include_path);
       Event('After Loading: '.$include_path);
     }else{
-      if(file_exists($include_path=$dir.'/Routing.php')){
-        Event('Before Loading: '.$include_path);
-        include_once($include_path);
-        Event('After Loading: '.$include_path);
-      }else{
-        Event('Could not find: '.$include_path);
-      }
+      Event('Could not find: '.$include_path);
     }
     
     if($handle = opendir($dir)){
@@ -49,8 +43,6 @@ function Loader($dir = 'plugins',$DieOnFail = true){
           Event('Before Recursively Loading Subdirectory: '.$extension);
           Loader($Path);
           Event('After Recursively Loading Subdirectory: '.$extension);
-        }else{
-          Event('Skipping : '.$Path);
         }
       }
       closedir($handle);
