@@ -1,2 +1,4 @@
-<!DOCTYPE html>
-<h1>Coming Soon!
+<?php
+
+header('Location: /Build.php');
+exit;
