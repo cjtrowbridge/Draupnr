@@ -1,12 +1,13 @@
 <?php
 
-Hook('Build','HomepageBuild();');
+Hook('Build','ExampleHomepageBuild();');
 
-function HomepageBuild(){
+function ExampleHomepageBuild(){
   global $App;
-  $PageName = 'Homepage';
-  $DestinationFile = 'index2.html';
-  $TemplateFile = 'homepage/template.html';
+  
+  $PageName = 'Draupnir Example';
+  $DestinationFile = 'index.html';
+  $TemplateFile = 'example-homepage/template.html';
   
   
   //Check if it is time to build
@@ -73,10 +74,12 @@ function HomepageBuild(){
   
   //Write to destination and archive
   file_put_contents($DestinationFile,$Template);
-  if(!(file_exists('archive/'.$PageName.'/'))){
-    mkdir('archive/'.$PageName);
+  
+  $PageNameDirectory = str_replace(' ','-',$PageName);
+  if(!(file_exists('archive/'.$PageNameDirectory.'/'))){
+    mkdir('archive/'.$PageNameDirectory);
   }
-  file_put_contents('archive/'.$PageName.'/'.date('Y-m-d').'.html',$Template);
+  file_put_contents('archive/'.$PageNameDirectory.'/'.date('Y-m-d').'.html',$Template);
   
   
   //TODO check if archive write failed because of weird filename and email admin
