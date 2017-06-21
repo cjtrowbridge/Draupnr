@@ -32,7 +32,7 @@ function ExampleHomepageBuild(){
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <h1>Homepage</h1>
+        <h1>'.$PageName.'</h1>
         <p><em>Here Is A Daily Random Design Quote!</em></p>
         '.$Feed['content'].'
         <p><a href="'.$Feed['link'].'" target="_blank"><i>By: '.$Feed['title'].'</i></a></p>
