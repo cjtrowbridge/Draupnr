@@ -58,6 +58,9 @@ function HomepageBuild(){
   
   //Write to destination and archive
   file_put_contents($DestinationFile,$Template);
+  if(!(file_exists('archive/'.$PageName.'/'))){
+    mkdir('archive/'.$PageName);
+  }
   file_put_contents('archive/'.$PageName.'/'.date('Y-m-d').'.html',$Template);
   
   
