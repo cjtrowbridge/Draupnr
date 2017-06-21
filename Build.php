@@ -16,7 +16,7 @@ $App = array(
 
 Loader('plugins');
 
-Loader('homepage');
+Loader('example-homepage');
 
 Event('Build');
 
