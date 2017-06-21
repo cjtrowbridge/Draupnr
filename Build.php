@@ -12,7 +12,7 @@ $App = array(
   'APP_TITLE'   => 'Draupnir.io',
   'HEAD'        => '',
   'NAV_LEFT'    => '',
-  'NAV_RIGHT'   => ''
+  'NAV_RIGHT'   => '<li class="nav-item"><a href="https://github.com/cjtrowbridge/Draupnr" target="_blank" class="nav-link"><img src="/img/github.png" style="height: 1em;" alt="Github" title="Github"></a></li>'
 );
 
 Loader('plugins');
