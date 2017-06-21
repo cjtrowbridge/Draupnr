@@ -9,11 +9,13 @@ function HomepageBuild(){
   
   
   //Check if it is time to build
-  $FileTime = filemtime($DestinationFile);
-  if(date('Y-m-d')==date('Y-m-d',$FileTime)){
-    //If the template's destination was last built today, we don't need to build it again.
-    echo '<p>Skipped template "'.$DestinationFile.' because it was freshly built."</p>'.PHP_EOL;
-    return;
+  if(file_exists($DestinationFile)){
+    $FileTime = filemtime($DestinationFile);
+    if(date('Y-m-d')==date('Y-m-d',$FileTime)){
+      //If the template's destination was last built today, we don't need to build it again.
+      echo '<p>Skipped template "'.$DestinationFile.' because it was freshly built."</p>'.PHP_EOL;
+      return;
+    }
   }
   
   
@@ -32,7 +34,7 @@ function HomepageBuild(){
   
   
   //Get template
-  $Template = file_get_contents($Template);
+  $Template = file_get_contents($TemplateFile);
   
   
   //Fill in template from each of our datasets
