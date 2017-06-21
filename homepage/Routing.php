@@ -26,11 +26,26 @@ function HomepageBuild(){
   $Feed = json_decode($Feed,true);
   $Feed=$Feed[0];
   
+  $Content = '
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1>Homepage</h1>
+        <p><em>Here Is A Daily Random Design Quote!</em></p>
+        '$Feed['content'].'
+        <p><a href="'.$Feed['link'].'" target="_blank"><i>By: '.$Feed['title'].'</i></a></p>
+      </div>
+    </div>
+  </div>
+  
+  ';
+  
   
   //Organize the data
   $Data = array(
     'PAGE_TITLE' => $PageName,
-    'PAGE_CONTENTS' => '<h1>Homepage</h1><p><em>Here Is A Daily Random Design Quote!</em></p>'.PHP_EOL.$Feed['content'].PHP_EOL.'<p><a href="'.$Feed['link'].'" target="_blank"><i>By: '.$Feed['title'].'</i></a></p>'
+    'PAGE_CONTENTS' => $Content
   );
   
   
