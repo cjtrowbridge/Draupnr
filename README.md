@@ -1,5 +1,5 @@
 # Draupnr
-Draupnr regularly crafts static sites from dynamic templates based on complex data inputs.
+*Draupnr regularly crafts static sites from dynamic templates based on complex data inputs.*
   
 Serving a folder full of html files will always be orders of magnitude faster than any dynamic, scripted site. It also requires orders of magnitude less in resources and thereby cost.  
   
