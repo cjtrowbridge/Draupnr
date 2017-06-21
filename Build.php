@@ -14,6 +14,7 @@ $App = array(
   'NAV_LEFT'    => '',
   'NAV_RIGHT'   => '<li class="nav-item"><a href="https://github.com/cjtrowbridge/Draupnr" target="_blank" class="nav-link"><img src="/img/github.png" style="height: 1em;" alt="Github" title="Github"></a></li>'
 );
+if(file_exists('head.html')){$App['HEAD']=file_get_contents('head.html').PHP_EOL.$App['HEAD'];}
 
 Loader('plugins');
 
