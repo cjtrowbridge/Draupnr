@@ -35,12 +35,15 @@ function HomepageBuild(){
   
   
   //Get template
-  if(!(file_exists($TemplateFile)){
-    echo '<p>Skipped template "'.$DestinationFile.' because the template file could not be loaded!"</p>'.PHP_EOL;
+  if(!(file_exists($TemplateFile))){
+    echo '<p>Skipped template "'.$DestinationFile.' because the template file could not be found!"</p>'.PHP_EOL;
     return;
   }
   $Template = file_get_contents($TemplateFile);
-  
+  if(!($Template)){
+    echo '<p>Skipped template "'.$DestinationFile.' because the template file could not be loaded!"</p>'.PHP_EOL;
+    return;
+  }
   
   //Fill in template from each of our datasets
   foreach(array(
