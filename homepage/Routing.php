@@ -6,7 +6,7 @@ function HomepageBuild(){
   global $App;
   $PageName = 'Homepage';
   $DestinationFile = 'index2.html';
-  $TemplateFile = 'template.html';
+  $TemplateFile = 'homepage/template.html';
   
   
   //Check if it is time to build
@@ -36,12 +36,12 @@ function HomepageBuild(){
   
   //Get template
   if(!(file_exists($TemplateFile))){
-    echo '<p>Skipped template "'.$DestinationFile.' because the template file could not be found!"</p>'.PHP_EOL;
+    echo '<p>Skipped template "'.$TemplateFile.' because the template file could not be found!"</p>'.PHP_EOL;
     return;
   }
   $Template = file_get_contents($TemplateFile);
   if(!($Template)){
-    echo '<p>Skipped template "'.$DestinationFile.' because the template file could not be loaded!"</p>'.PHP_EOL;
+    echo '<p>Skipped template "'.$TemplateFile.' because the template file could not be loaded!"</p>'.PHP_EOL;
     return;
   }
   
