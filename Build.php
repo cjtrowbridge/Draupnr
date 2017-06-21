@@ -4,9 +4,16 @@
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
-if(!file_exists('plugins/Config.php')){die('Please create config file from sample.');}
-include('plugins/Config.php');
-include('pluigns/Loader.php');
+include('plugins/Loader.php');
+
+global $App;
+$App = array(
+  'APP_FAVICON' => '',
+  'APP_TITLE'   => 'Draupnir.io',
+  'HEAD'        => '',
+  'NAV'         => ''
+);
+
 Loader('plugins');
 
 Loader('example');
