@@ -10,7 +10,7 @@ function Loader($dir = 'plugins',$DieOnFail = true){
     if($handle = opendir('plugins')){
       while (false !== ($class = readdir($handle))){
         $include_path='plugins/'.$class;
-        if((!(strpos($class,'.php')===false)) && $class != "." && $class != ".." && file_exists($include_path)){
+        if((!(strpos($class,'.php')===false)) && $class != "."&& $class != "index.php" && $class != ".." && file_exists($include_path)){
           Event('Before Loading: '.$include_path);
           include_once($include_path);
           Event('After Loading: '.$include_path);
