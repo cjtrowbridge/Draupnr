@@ -11,7 +11,8 @@ $App = array(
   'APP_FAVICON' => '',
   'APP_TITLE'   => 'Draupnir.io',
   'HEAD'        => '',
-  'NAV'         => ''
+  'NAV_LEFT'    => '',
+  'NAV_RIGHT'   => ''
 );
 
 Loader('plugins');
