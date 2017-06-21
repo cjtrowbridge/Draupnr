@@ -1,7 +1,7 @@
 <?php 
 
-include_once('core/Event.php');
-include_once('core/Hook.php');
+include_once('plugins/Event.php');
+include_once('plugins/Hook.php');
 
 function Loader($dir = 'plugins',$DieOnFail = true){
   Event('Before Loading Directory: '.$dir);
