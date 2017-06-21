@@ -33,7 +33,7 @@ function HomepageBuild(){
       <div class="col-xs-12">
         <h1>Homepage</h1>
         <p><em>Here Is A Daily Random Design Quote!</em></p>
-        '$Feed['content'].'
+        '.$Feed['content'].'
         <p><a href="'.$Feed['link'].'" target="_blank"><i>By: '.$Feed['title'].'</i></a></p>
       </div>
     </div>
