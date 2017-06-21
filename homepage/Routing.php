@@ -27,7 +27,7 @@ function HomepageBuild(){
   //Organize the data
   $Data = array(
     'PAGE_TITLE' => $PageName,
-    'PAGE_CONTENTS' => '<h1>Homepage</h1><p><em>Here Is A Daily Random Design Quote!</em></p>'.PHP_EOL.$Feed['content'].PHP_EOL.'<p><a href="'.$Feed['link'].'" target="_blank"><i>By: '.$Feed['title'].'</i></a></p>';
+    'PAGE_CONTENTS' => '<h1>Homepage</h1><p><em>Here Is A Daily Random Design Quote!</em></p>'.PHP_EOL.$Feed['content'].PHP_EOL.'<p><a href="'.$Feed['link'].'" target="_blank"><i>By: '.$Feed['title'].'</i></a></p>'
   );
   
   
