@@ -3,6 +3,7 @@
 Hook('Build','HomepageBuild();');
 
 function HomepageBuild(){
+  global $App;
   $PageName = 'Homepage';
   $DestinationFile = '../index2.html';
   $TemplateFile = 'template.html';
