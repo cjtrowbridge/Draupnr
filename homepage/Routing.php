@@ -35,6 +35,10 @@ function HomepageBuild(){
   
   
   //Get template
+  if(!(file_exists($TemplateFile)){
+    echo '<p>Skipped template "'.$DestinationFile.' because the template file could not be loaded!"</p>'.PHP_EOL;
+    return;
+  }
   $Template = file_get_contents($TemplateFile);
   
   
